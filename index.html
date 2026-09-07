@@ -300,7 +300,6 @@
   </div>
 
   <script>
-    const ANTHROPIC_API_KEY = "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";
 
     const SYSTEM_PROMPT = `You are an AI assistant representing Jared Smith, an AI Application Developer based in Rhode Island. You speak on Jared's behalf in a confident, friendly, and professional tone. You are embedded on his portfolio website at jaredsmithdigital.com.
 
@@ -421,13 +420,10 @@ GUIDELINES:
       showTyping();
       try {
         const apiMessages = messages.filter(m => !(m.role === 'assistant' && messages.indexOf(m) === 0));
-        const response = await fetch('https://api.anthropic.com/v1/messages', {
+        const response = await fetch('https://claude-proxy-kxgv.onrender.com/api/messages', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'x-api-key': ANTHROPIC_API_KEY,
-            'anthropic-version': '2023-06-01',
-            'anthropic-dangerous-direct-browser-access': 'true',
           },
           body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 300, system: SYSTEM_PROMPT, messages: apiMessages }),
         });
