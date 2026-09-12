@@ -39,6 +39,27 @@
     .section-label { font-size: 12px; font-weight: 600; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
     .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: var(--white); letter-spacing: -0.02em; margin-bottom: 16px; line-height: 1.15; }
     .section-desc { font-size: 16px; color: var(--text-dim); max-width: 560px; line-height: 1.75; margin-bottom: 56px; }
+
+.category-header {
+  margin-bottom: 20px;
+}
+
+.category-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+  padding-left: 14px;
+  border-left: 3px solid var(--gold);
+}
+
+.category-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  padding-left: 17px;
+}
     .divider { border: none; border-top: 1px solid var(--border); margin: 0 40px; }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
     .project-card { background: var(--navy-2); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-decoration: none; display: block; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
@@ -154,20 +175,17 @@
 
   <hr class="divider" />
 
-  <section id="projects">
+<section id="projects">
     <div class="section-label">Portfolio</div>
     <h2 class="section-title">AI Agents & Tools</h2>
-    <p class="section-desc">Production-deployed applications built with the Anthropic Claude API. Each one solves a real problem I face daily.</p>
-    <div class="projects-grid">
+    <p class="section-desc">Production-deployed applications built with the Anthropic Claude API — all secured through a backend proxy so API keys are never exposed to the browser.</p>
 
-      <a href="https://premarket-brief-lemon.vercel.app" target="_blank" class="project-card">
-        <div class="project-icon">📊</div>
-        <div class="project-name">Pre-Market Brief</div>
-        <p class="project-desc">AI-powered morning trading intelligence agent. Analyzes a personal watchlist and generates GO/NO-GO verdicts with sentiment, technical levels, and catalyst data.</p>
-        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Vite</span><span class="tag">Vercel</span></div>
-        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-      </a>
-
+    <!-- CATEGORY: Career & Job Search -->
+    <div class="category-header">
+      <div class="category-title">💼 Career & Job Search</div>
+      <div class="category-desc">AI tools for finding jobs, tailoring applications, and standing out to employers</div>
+    </div>
+    <div class="projects-grid" style="margin-bottom: 48px;">
       <a href="https://job-scout-taupe.vercel.app" target="_blank" class="project-card">
         <div class="project-icon">🔍</div>
         <div class="project-name">Job Scout</div>
@@ -175,7 +193,28 @@
         <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Web Search</span><span class="tag">Vercel</span></div>
         <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
       </a>
+      <a href="https://resume-builder-lac-five.vercel.app" target="_blank" class="project-card">
+        <div class="project-icon">📝</div>
+        <div class="project-name">Resume Builder</div>
+        <p class="project-desc">AI-powered resume builder that tailors your resume for specific job postings, scores ATS compatibility, identifies keyword gaps, and generates cover letters — with PDF export.</p>
+        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">PDF Export</span><span class="tag">ATS</span></div>
+        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </a>
+    </div>
 
+    <!-- CATEGORY: Finance & Trading -->
+    <div class="category-header">
+      <div class="category-title">📈 Finance & Trading</div>
+      <div class="category-desc">AI tools for market intelligence, trade analysis, and performance tracking</div>
+    </div>
+    <div class="projects-grid" style="margin-bottom: 48px;">
+      <a href="https://premarket-brief-lemon.vercel.app" target="_blank" class="project-card">
+        <div class="project-icon">📊</div>
+        <div class="project-name">Pre-Market Brief</div>
+        <p class="project-desc">AI-powered morning trading intelligence agent. Analyzes a personal watchlist and generates GO/NO-GO verdicts with sentiment, technical levels, and catalyst data.</p>
+        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Vite</span><span class="tag">Vercel</span></div>
+        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </a>
       <a href="https://trade-journal-one-eta.vercel.app" target="_blank" class="project-card">
         <div class="project-icon">📓</div>
         <div class="project-name">Trade Journal</div>
@@ -183,31 +222,14 @@
         <div class="project-tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">React</span><span class="tag">Render</span></div>
         <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
       </a>
+    </div>
 
-      <a href="https://meal-agent-ochre.vercel.app" target="_blank" class="project-card">
-        <div class="project-icon">🍳</div>
-        <div class="project-name">Meal Agent</div>
-        <p class="project-desc">AI-powered meal planning tool that generates recipes from your available ingredients, plus smart suggestions for dishes that need just a few extra items to buy.</p>
-        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Vite</span><span class="tag">Vercel</span></div>
-        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-      </a>
-
-      <a href="https://research-agent-indol.vercel.app" target="_blank" class="project-card">
-        <div class="project-icon">🔬</div>
-        <div class="project-name">Research Agent</div>
-        <p class="project-desc">Multi-step AI research agent that autonomously searches the web, synthesizes findings across multiple sources, and generates structured reports on any company, person, market, or topic.</p>
-        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Web Search</span><span class="tag">Agentic</span></div>
-        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-      </a>
-
-      <a href="https://document-qa-one.vercel.app" target="_blank" class="project-card">
-        <div class="project-icon">📄</div>
-        <div class="project-name">Document Q&A</div>
-        <p class="project-desc">RAG-style document intelligence agent that extracts text from PDFs, Word docs, CSVs, and text files — enabling multi-turn conversation grounded in document content.</p>
-        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">PDF.js</span><span class="tag">RAG</span></div>
-        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-      </a>
-
+    <!-- CATEGORY: Health & Wellness -->
+    <div class="category-header">
+      <div class="category-title">🏃 Health & Wellness</div>
+      <div class="category-desc">AI tools for fitness, nutrition, and healthy living</div>
+    </div>
+    <div class="projects-grid" style="margin-bottom: 48px;">
       <a href="https://workout-agent-zeta.vercel.app" target="_blank" class="project-card">
         <div class="project-icon">💪</div>
         <div class="project-name">Workout Agent</div>
@@ -215,25 +237,45 @@
         <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Vite</span><span class="tag">Vercel</span></div>
         <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
       </a>
-
       <a href="https://nutrition-agent-virid.vercel.app" target="_blank" class="project-card">
-  <div class="project-icon">🥗</div>
-  <div class="project-name">Nutrition Agent</div>
-  <p class="project-desc">AI-powered nutrition planner that builds personalized meal plans based on your health goals, body stats, and dietary preferences — with integrated fridge-to-recipe matching aligned to your macro targets.</p>
-  <div class="project-tags">
-    <span class="tag">React</span>
-    <span class="tag">Claude API</span>
-    <span class="tag">Vite</span>
-    <span class="tag">Vercel</span>
-  </div>
-  <span class="project-link">
-    Live Demo
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-  </span>
-</a>
+        <div class="project-icon">🥗</div>
+        <div class="project-name">Nutrition Agent</div>
+        <p class="project-desc">AI-powered nutrition planner that builds personalized meal plans based on your health goals, body stats, and dietary preferences — with integrated fridge-to-recipe matching aligned to your macro targets.</p>
+        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Vite</span><span class="tag">Vercel</span></div>
+        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </a>
+      <a href="https://meal-agent-ochre.vercel.app" target="_blank" class="project-card">
+        <div class="project-icon">🍳</div>
+        <div class="project-name">Meal Agent</div>
+        <p class="project-desc">AI-powered meal planning tool that generates recipes from your available ingredients, plus smart suggestions for dishes that need just a few extra items to buy.</p>
+        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Vite</span><span class="tag">Vercel</span></div>
+        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </a>
+    </div>
 
+    <!-- CATEGORY: Research & Productivity -->
+    <div class="category-header">
+      <div class="category-title">🔬 Research & Productivity</div>
+      <div class="category-desc">AI tools for deep research, document analysis, and knowledge extraction</div>
+    </div>
+    <div class="projects-grid">
+      <a href="https://research-agent-indol.vercel.app" target="_blank" class="project-card">
+        <div class="project-icon">🔬</div>
+        <div class="project-name">Research Agent</div>
+        <p class="project-desc">Multi-step AI research agent that autonomously searches the web, synthesizes findings across multiple sources, and generates structured reports on any company, person, market, or topic.</p>
+        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">Web Search</span><span class="tag">Agentic</span></div>
+        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </a>
+      <a href="https://document-qa-one.vercel.app" target="_blank" class="project-card">
+        <div class="project-icon">📄</div>
+        <div class="project-name">Document Q&A</div>
+        <p class="project-desc">RAG-style document intelligence agent that extracts text from PDFs, Word docs, CSVs, and text files — enabling multi-turn conversation grounded in document content.</p>
+        <div class="project-tags"><span class="tag">React</span><span class="tag">Claude API</span><span class="tag">PDF.js</span><span class="tag">RAG</span></div>
+        <span class="project-link">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </a>
     </div>
   </section>
+
 
   <hr class="divider" />
 
